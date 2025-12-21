@@ -4,23 +4,23 @@ import { RateLimiter } from "@/app/lib/core/RateLimiter";
 import { IssueService } from "@/app/lib/issues/IssueService";
 import { ApiError } from "@/app/lib/errors/ApiError";
 
-// for specific issue operations
-
 const issueService = new IssueService();
 
 type Params = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 // GET /api/issues/[id]
 export async function GET(req: NextRequest, { params }: Params) {
   try {
+    const { id } = await params;
+
     const user = AuthMiddleware.authenticate(req);
     RateLimiter.check(req, user.id);
 
-    const issue = await issueService.getIssueById(user.id, params.id);
+    const issue = await issueService.getIssueById(user.id, id);
 
     return NextResponse.json(issue, { status: 200 });
   } catch (err: any) {
@@ -48,6 +48,8 @@ export async function GET(req: NextRequest, { params }: Params) {
 // PUT /api/issues/[id]
 export async function PUT(req: NextRequest, { params }: Params) {
   try {
+    const { id } = await params;
+
     const user = AuthMiddleware.authenticate(req);
     RateLimiter.check(req, user.id);
 
@@ -55,7 +57,7 @@ export async function PUT(req: NextRequest, { params }: Params) {
 
     const updated = await issueService.updateIssue(
       user.id,
-      params.id,
+      id,
       body
     );
 
@@ -85,10 +87,12 @@ export async function PUT(req: NextRequest, { params }: Params) {
 // DELETE /api/issues/[id]
 export async function DELETE(req: NextRequest, { params }: Params) {
   try {
+    const { id } = await params;
+
     const user = AuthMiddleware.authenticate(req);
     RateLimiter.check(req, user.id);
 
-    await issueService.deleteIssue(user.id, params.id);
+    await issueService.deleteIssue(user.id, id);
 
     return NextResponse.json(
       { message: "Issue deleted successfully" },

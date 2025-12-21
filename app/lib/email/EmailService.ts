@@ -9,9 +9,9 @@ export class EmailService {
   private static resend = new Resend(process.env.RESEND_API_KEY!);
   private static from = process.env.EMAIL_FROM!;
 
-  // =========================
+
   // WELCOME EMAIL
-  // =========================
+  
   static async sendWelcomeEmail(email: string) {
     console.log("🚀 SEND WELCOME EMAIL CALLED");
     console.log("➡️ To:", email);
@@ -29,21 +29,21 @@ export class EmailService {
         `,
       });
 
-      console.log("✅ WELCOME EMAIL SENT SUCCESSFULLY");
-      console.log("📨 Resend Response:", res);
+      console.log(" WELCOME EMAIL SENT SUCCESSFULLY");
+      console.log(" Resend Response:", res);
     } catch (err) {
-      console.error("❌ FAILED TO SEND WELCOME EMAIL");
-      console.error("🧨 Error:", err);
+      console.error(" FAILED TO SEND WELCOME EMAIL");
+      console.error(" Error:", err);
       throw new ApiError("Failed to send welcome email", 500);
     }
   }
 
-  // =========================
+
   // VERIFICATION EMAIL
-  // =========================
+  
   static async sendVerificationEmail(email: string, token: string) {
-    console.log("🚀 SEND VERIFICATION EMAIL CALLED");
-    console.log("➡️ To:", email);
+    console.log(" SEND VERIFICATION EMAIL CALLED");
+    console.log("To:", email);
     
     // In local dev, we might not have a real domain, so use localhost
     // In production, use the actual domain
@@ -66,18 +66,18 @@ export class EmailService {
         `,
       });
 
-      console.log("✅ VERIFICATION EMAIL SENT SUCCESSFULLY");
+      console.log(" VERIFICATION EMAIL SENT SUCCESSFULLY");
     } catch (err) {
-      console.error("❌ FAILED TO SEND VERIFICATION EMAIL");
-      console.error("🧨 Error:", err);
+      console.error("FAILED TO SEND VERIFICATION EMAIL");
+      console.error(" Error:", err);
       // Don't throw here, just log it. We don't want to break registration if email fails 
-      // (though in a real app we might want to retry)
+      
     }
   }
 
-  // =========================
+ 
   // ISSUE CREATED EMAIL
-  // =========================
+
   static async sendIssueCreatedEmail(
     email: string,
     issue: {
