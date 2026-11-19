@@ -1,29 +1,12 @@
-# 1. Base image (Linux)
-FROM node:20-alpine
-
-# 2. Set working directory inside container
+# Static Mitiga marketing site
+FROM node:20-alpine AS build
 WORKDIR /app
-
-# 3. Copy package files first (for caching)
 COPY package*.json ./
-
-# 4. Install dependencies (Linux versions)
-RUN npm install
-
-# 5. Copy Prisma schema
-COPY prisma ./prisma
-
-# 6. Generate Prisma CLIENT 
-RUN npx prisma generate
-
-# 7. Copy rest of the app
+RUN npm ci
 COPY . .
-
-# 8. Build Next.js
 RUN npm run build
 
-# 9. Expose port
-EXPOSE 3000
-
-# 10. Start production server
-CMD ["npm", "start"]
+FROM nginx:1.27-alpine
+COPY --from=build /app/out /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

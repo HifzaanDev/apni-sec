@@ -84,3 +84,31 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #2a3038 var(--background);
 }
+
+.scan-line {
+  animation: mitiga-scan 2.4s ease-in-out infinite;
+}
+
+@keyframes mitiga-scan {
+  0% {
+    transform: translateX(-40px) rotate(12deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(40px) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-line {
+    animation: none;
+    opacity: 0.5;
+  }
+}

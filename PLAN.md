@@ -52,13 +52,13 @@ Staggered reveals, scroll fade/translate, attack-graph pulse, detection-feed typ
 
 ## Verification checklist
 
-- [ ] lint / tsc / build clean
-- [ ] Zero ApniSec / prisma / bcrypt / JWT / RESEND / DATABASE_URL references
-- [ ] Every link and CTA resolves
-- [ ] Forms validate + mailto path
-- [ ] Reduced motion respected
-- [ ] Metadata, OG, JSON-LD, sitemap, robots
-- [ ] README with Vercel redeploy (zero env)
+- [x] lint / tsc / build clean
+- [x] Zero product-code ApniSec / prisma / bcrypt / JWT / RESEND / DATABASE_URL references
+- [x] Every link and CTA resolves
+- [x] Forms validate + mailto path
+- [x] Reduced motion respected
+- [x] Metadata, OG, JSON-LD, sitemap, robots
+- [x] README with Vercel redeploy (zero env)
 
 ## Founder TODOs (also marked in content)
 

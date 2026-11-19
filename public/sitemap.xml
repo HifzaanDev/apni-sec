@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mitiga.io/</loc></url>
+  <url><loc>https://mitiga.io/about</loc></url>
+  <url><loc>https://mitiga.io/contact</loc></url>
+  <url><loc>https://mitiga.io/services/cloud-security</loc></url>
+  <url><loc>https://mitiga.io/services/red-team</loc></url>
+  <url><loc>https://mitiga.io/services/vapt</loc></url>
+  <url><loc>https://mitiga.io/research</loc></url>
+  <url><loc>https://mitiga.io/research/cloud-misconfiguration-chains</loc></url>
+  <url><loc>https://mitiga.io/research/ai-in-red-teaming</loc></url>
+  <url><loc>https://mitiga.io/research/api-security-beyond-owasp</loc></url>
+  <url><loc>https://mitiga.io/privacy</loc></url>
+  <url><loc>https://mitiga.io/terms</loc></url>
+  <url><loc>https://mitiga.io/security</loc></url>
+</urlset>
