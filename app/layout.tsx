@@ -14,25 +14,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "ApniSec - Enterprise Cybersecurity Solutions",
-    template: "%s | ApniSec",
+    default: "Mitiga — AI-native security for modern infrastructure",
+    template: "%s | Mitiga",
   },
-  description: "Leading cybersecurity company providing Cloud Security, Red Team Assessment, and VAPT services to protect your digital assets.",
-  keywords: ["cybersecurity", "cloud security", "red team", "VAPT", "penetration testing", "security assessment", "vulnerability testing"],
-  authors: [{ name: "ApniSec" }],
-  creator: "ApniSec",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://apnisec.com",
-    title: "ApniSec - Enterprise Cybersecurity Solutions",
-    description: "Leading cybersecurity company providing Cloud Security, Red Team Assessment, and VAPT services.",
-    siteName: "ApniSec",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  description:
+    "Mitiga builds AI-powered cybersecurity for cloud-native teams: detection, triage, attack-path analysis, and continuous posture.",
+  metadataBase: new URL("https://mitiga.io"),
 };
 
 export default function RootLayout({

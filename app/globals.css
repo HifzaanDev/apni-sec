@@ -1,51 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b0d10;
+  --foreground: #e8eaed;
+  --muted: #8b929a;
+  --accent: #2ee6a6;
+  --accent-dim: #1a9e72;
+  --surface: #12151a;
+  --surface-elevated: #181c22;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --glow: rgba(46, 230, 166, 0.15);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-glow: var(--glow);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
-/* Custom Scrollbar */
+::selection {
+  background: rgba(46, 230, 166, 0.25);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b; /* zinc-950 */
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #15803d; /* green-700 */
+  background: #2a3038;
   border-radius: 5px;
-  border: 2px solid #09090b; /* Creates padding effect */
+  border: 2px solid var(--background);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a34a; /* green-600 */
+  background: var(--accent-dim);
 }
 
-/* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #15803d #09090b;
+  scrollbar-color: #2a3038 var(--background);
 }
