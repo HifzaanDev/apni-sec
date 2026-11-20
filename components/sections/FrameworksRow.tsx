@@ -13,7 +13,7 @@ export function FrameworksRow() {
         <SectionHeading
           eyebrow="Standards"
           title="Aligned with frameworks your stakeholders already use."
-          body="We map work to established frameworks. Alignment is not the same as certification—and we will not claim certifications we do not hold."
+          body="We map our work to established frameworks. That means methodological alignment, not a claim that we hold those certifications."
         />
         <motion.ul
           className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5"

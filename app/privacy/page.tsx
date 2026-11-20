@@ -9,26 +9,25 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main className="pt-28 pb-20">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 prose-invert">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-semibold tracking-tight">Privacy</h1>
-        <p className="mt-4 text-sm text-muted">
-          Last updated: March 19, 2026.{" "}
-          <span className="font-mono text-[11px]">TODO: legal review</span>
-        </p>
+        <p className="mt-4 text-sm text-muted">Last updated: March 19, 2026.</p>
         <div className="mt-8 space-y-5 text-sm leading-relaxed text-muted md:text-base">
           <p>
-            This site is a static marketing property. Contact and newsletter forms open your email
-            client via mailto and do not transmit form fields to Mitiga servers from the browser
-            beyond what your mail client sends.
+            This site is a marketing site for Mitiga. Contact and newsletter forms open your email
+            client via mailto and do not store form fields on our servers from the browser beyond
+            what your mail client sends.
           </p>
           <p>
-            We do not embed third-party advertising or analytics trackers by default. If analytics
-            are added later, they will be privacy-friendly and disclosed here.
+            We do not embed third-party advertising trackers by default. If we add analytics later,
+            we will disclose that here.
           </p>
           <p>
-            If you email us at {site.email}, we process the contents of that correspondence to
-            respond to your inquiry. Do not send sensitive credentials or production secrets over
-            email.
+            If you email us at {site.email}, we use that correspondence to respond to your inquiry.
+            Do not send production secrets or credentials over email.
+          </p>
+          <p>
+            Office: {site.address}
           </p>
           <p>
             Questions:{" "}

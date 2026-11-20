@@ -11,7 +11,7 @@ export function FinalCta() {
             Next step
           </p>
           <h2 className="mt-3 text-balance text-[clamp(1.6rem,3vw,2.4rem)] font-semibold tracking-[-0.03em]">
-            Request a briefing. We will tell you if we are the right fit.
+            Request a briefing. We will say honestly if we are the right fit.
           </h2>
         </div>
         <div className="flex flex-wrap gap-3">

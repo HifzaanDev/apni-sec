@@ -9,8 +9,8 @@ export function ContactSection() {
         <div>
           <SectionHeading
             eyebrow="Contact"
-            title="Tell us about your environment and objectives."
-            body="Use the form to open a structured email, or write us directly. No phone number—email is the fastest path."
+            title="Tell us about your environment and what you need."
+            body="Use the form or write us directly. Email is the fastest way to reach us."
           />
           <div className="mt-8 space-y-3 text-sm text-muted">
             <p>
@@ -22,10 +22,10 @@ export function ContactSection() {
             <p>
               Schedule:{" "}
               <a href={site.scheduleUrl} className="text-accent hover:underline">
-                mailto briefing request
-              </a>{" "}
-              <span className="text-muted/70">(TODO: Cal.com URL)</span>
+                Request a briefing by email
+              </a>
             </p>
+            <p className="max-w-md leading-relaxed">{site.address}</p>
           </div>
         </div>
         <ContactForm />

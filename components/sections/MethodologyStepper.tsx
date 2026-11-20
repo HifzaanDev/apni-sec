@@ -24,8 +24,8 @@ export function MethodologyStepper() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Approach"
-          title="Discover → Model → Test → Remediate → Verify"
-          body="A repeatable methodology. Depth changes with the engagement; the shape does not."
+          title="Discover, Model, Test, Remediate, Verify"
+          body="A repeatable methodology. Depth changes with the engagement. The shape does not."
         />
         <div ref={ref} className="relative mt-14">
           <div className="absolute left-[15px] top-2 bottom-2 w-px bg-border md:left-1/2 md:-translate-x-px" />

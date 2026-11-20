@@ -17,7 +17,7 @@ export default function ResearchIndexPage() {
           Insights written to be useful
         </h1>
         <p className="mt-4 max-w-2xl text-muted">
-          Short technical pieces. No agency cadence—publish when there is something worth saying.
+          Short technical pieces on cloud risk, red teaming, and API security.
         </p>
         <ul className="mt-12 space-y-4">
           {researchArticles.map((article) => (

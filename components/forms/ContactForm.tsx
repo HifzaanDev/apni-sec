@@ -7,6 +7,7 @@ import {
   type ContactPayload,
 } from "@/lib/forms";
 import { Button } from "@/components/ui/Button";
+import { site } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 const empty: ContactPayload = { name: "", email: "", company: "", message: "" };
@@ -39,8 +40,11 @@ export function ContactForm({ className }: { className?: string }) {
         <p className="font-medium text-accent">Ready to send</p>
         <p className="mt-2 text-muted">
           Your mail client should open with a structured briefing request. If it did not, email{" "}
-          <a className="text-accent underline-offset-2 hover:underline" href="mailto:contact@mitiga.io">
-            contact@mitiga.io
+          <a
+            className="text-accent underline-offset-2 hover:underline"
+            href={`mailto:${site.email}`}
+          >
+            {site.email}
           </a>{" "}
           directly.
         </p>

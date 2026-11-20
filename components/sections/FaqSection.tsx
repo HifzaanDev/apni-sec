@@ -9,7 +9,7 @@ export function FaqSection() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
             eyebrow="FAQ"
-            title="Straight answers for evaluators and grant reviewers."
+            title="Common questions, answered plainly."
           />
           <Accordion items={faqs} />
         </div>

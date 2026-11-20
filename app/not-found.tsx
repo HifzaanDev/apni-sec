@@ -10,7 +10,7 @@ export default function NotFound() {
           This path is not on the map.
         </h1>
         <p className="mt-4 text-muted">
-          The page you requested does not exist—or moved. Head home or request a briefing.
+          The page you requested does not exist, or it moved. Head home or request a briefing.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Button href="/">

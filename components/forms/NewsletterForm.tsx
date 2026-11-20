@@ -20,7 +20,6 @@ export function NewsletterForm() {
       return;
     }
     setError(undefined);
-    // Explicit mailto transport — swap in lib/forms.ts for a provider.
     submitNewsletterMailto({ email });
     setSuccess(true);
   }

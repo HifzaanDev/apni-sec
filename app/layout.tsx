@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.tagline}`,
+    default: `${site.name} | ${site.tagline}`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Mitiga" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
+    title: `${site.name} | ${site.tagline}`,
     description: site.description,
     images: ["/og.jpg"],
   },
@@ -62,7 +62,13 @@ const jsonLd = {
   url: site.url,
   email: site.email,
   description: site.description,
-  sameAs: [site.social.linkedin, site.social.x, site.social.github],
+  sameAs: [site.social.x],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address,
+    addressLocality: "Bangalore",
+    addressCountry: "IN",
+  },
 };
 
 export default function RootLayout({
@@ -75,7 +81,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
       >
-        {/* Analytics placeholder: add privacy-friendly analytics (e.g. Plausible) here. No trackers by default. */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

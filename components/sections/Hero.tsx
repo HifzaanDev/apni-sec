@@ -40,7 +40,7 @@ export function Hero() {
             className="mb-5 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 font-mono text-[11px] uppercase tracking-[0.16em] text-accent"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            AI-native security
+            AI native security
           </motion.p>
           <motion.h1
             variants={reduce ? undefined : fadeUp}
@@ -52,8 +52,8 @@ export function Hero() {
             variants={reduce ? undefined : fadeUp}
             className="mt-5 max-w-lg text-pretty text-base leading-relaxed text-muted md:text-lg"
           >
-            Detection, triage, and attack-path analysis for cloud-native teams—grounded in
-            frameworks you already map to, without theater.
+            Detection, triage, and attack-path analysis for cloud teams, grounded in frameworks
+            you already use.
           </motion.p>
           <motion.div
             variants={reduce ? undefined : fadeUp}
@@ -63,7 +63,7 @@ export function Hero() {
               Request a briefing
               <IconArrow />
             </MagneticButton>
-            <MagneticButton href="/#platform" variant="secondary">
+            <MagneticButton href="#platform" variant="secondary">
               Explore the platform
             </MagneticButton>
           </motion.div>

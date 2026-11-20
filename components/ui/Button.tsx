@@ -36,7 +36,14 @@ export function Button({
 
   if ("href" in rest && rest.href) {
     const { href, external, ...linkRest } = rest as ButtonAsLink;
-    if (external || href.startsWith("mailto:") || href.startsWith("http")) {
+    // Hash / mailto / external: native <a> so same-page anchors actually scroll
+    const useAnchor =
+      external ||
+      href.startsWith("mailto:") ||
+      href.startsWith("http") ||
+      href.startsWith("#") ||
+      href.includes("#");
+    if (useAnchor) {
       return (
         <a
           href={href}

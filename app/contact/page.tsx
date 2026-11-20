@@ -18,8 +18,8 @@ export default function ContactPage() {
             Request a briefing
           </h1>
           <p className="mt-4 text-pretty text-muted">
-            Share your environment and objectives. We respond with a clear scope recommendation—or
-            an honest no if we are not the right partner.
+            Share your environment and objectives. We will come back with a clear scope, or say if
+            we are not the right fit.
           </p>
           <ul className="mt-8 space-y-3 text-sm text-muted">
             <li>
@@ -28,12 +28,7 @@ export default function ContactPage() {
                 {site.email}
               </a>
             </li>
-            <li>
-              Schedule:{" "}
-              <a className="text-accent hover:underline" href={site.scheduleUrl}>
-                Open mailto scheduling request
-              </a>
-            </li>
+            <li className="max-w-md leading-relaxed">{site.address}</li>
           </ul>
           <div className="mt-6">
             <Button href={site.scheduleUrl} variant="secondary" external>

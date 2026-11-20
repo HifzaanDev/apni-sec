@@ -1,24 +1,22 @@
 /**
  * Central editable copy for Mitiga.
- * TODO (founders): replace placeholders marked with TODO below with verified facts.
  */
 
 export const site = {
   name: "Mitiga",
-  tagline: "AI-native security for modern infrastructure",
+  tagline: "AI native security for modern infrastructure",
   description:
-    "Mitiga helps cloud-native teams detect, triage, and remediate risk with AI-assisted analysis grounded in established security frameworks.",
-  url: "https://mitiga.io",
-  email: "contact@mitiga.io",
+    "Mitiga helps cloud teams detect, triage, and fix security risk with AI-assisted analysis and hands-on assessments.",
+  url: "https://mitiga.in",
+  email: "info@mitiga.in",
+  address:
+    "(EPIP F-26) Plot No 77, Sy No 150, EPIP Layout, Whitefield, Bangalore 560066, Karnataka 560099",
   copyrightYear: 2026,
   social: {
-    // TODO: replace with real organization profiles
-    linkedin: "https://linkedin.com/company/mitiga",
-    x: "https://x.com/mitiga",
-    github: "https://github.com/mitiga",
+    linkedin: "#",
+    x: "https://x.com/mitiga_in",
   },
-  // TODO: replace with real Cal.com / scheduling URL
-  scheduleUrl: "mailto:contact@mitiga.io?subject=Request%20a%20briefing",
+  scheduleUrl: "mailto:info@mitiga.in?subject=Request%20a%20briefing",
 } as const;
 
 export const navLinks = [
@@ -32,21 +30,21 @@ export const navLinks = [
 
 export const credibilityCues = [
   { label: "Service lines", value: "3" },
-  { label: "Framework alignment", value: "5" },
-  { label: "Design partners", value: "Onboarding" },
+  { label: "Frameworks mapped", value: "5" },
+  { label: "Based in", value: "Bangalore" },
 ] as const;
 
 export const problem = {
   eyebrow: "Context",
   title: "Manual security cannot keep pace with cloud change.",
-  body: "Infrastructure ships continuously. Attack surfaces expand with every service account, API, and misconfigured bucket. Static checklists and quarterly scans leave gaps that automated adversaries exploit in hours, not weeks.",
+  body: "Infrastructure ships every day. Attack surfaces grow with every service account, API, and misconfigured bucket. Quarterly scans leave gaps that real attackers find in hours, not weeks.",
 } as const;
 
 export const platformCapabilities = [
   {
     id: "detection",
     title: "AI-assisted threat detection",
-    body: "Correlate signals across identity, network, and workload telemetry to surface high-confidence detections—not alert noise.",
+    body: "Correlate signals across identity, network, and workloads so you see real detections, not alert noise.",
     visual: "radar" as const,
   },
   {
@@ -58,19 +56,19 @@ export const platformCapabilities = [
   {
     id: "attack-path",
     title: "Attack-path analysis",
-    body: "Map how permissions, trust boundaries, and exposures chain into reachable impact.",
+    body: "Map how permissions, trust boundaries, and exposures chain into real impact.",
     visual: "graph" as const,
   },
   {
     id: "posture",
     title: "Continuous cloud posture",
-    body: "Watch configuration drift across AWS, Azure, and GCP with prioritized remediation guidance.",
+    body: "Watch configuration drift across AWS, Azure, and GCP, with clear remediation guidance.",
     visual: "posture" as const,
   },
   {
     id: "reporting",
     title: "AI-augmented reporting",
-    body: "Produce clear executive summaries and engineer-ready reproduction steps from the same evidence base.",
+    body: "Turn the same evidence into clear executive summaries and engineer-ready reproduction steps.",
     visual: "report" as const,
   },
 ] as const;
@@ -80,7 +78,7 @@ export const services = [
     slug: "cloud-security",
     title: "Cloud Security",
     short:
-      "Identity, network, data, and CI/CD reviews across AWS, Azure, and GCP—with reproducible findings.",
+      "Identity, network, data, and CI/CD reviews across AWS, Azure, and GCP, with findings you can reproduce.",
     scope: [
       "IAM and privilege analysis",
       "Network segmentation and exposure",
@@ -105,7 +103,7 @@ export const services = [
     slug: "red-team",
     title: "Red Team Assessment",
     short:
-      "Adversary simulation that tests detection and response—not just perimeter checkboxes.",
+      "Adversary simulation that tests detection and response, not just perimeter checklists.",
     scope: [
       "Objective-based intrusion scenarios",
       "Identity and lateral movement paths",
@@ -130,7 +128,7 @@ export const services = [
     slug: "vapt",
     title: "VAPT",
     short:
-      "Vulnerability assessment and penetration testing for apps, APIs, and networks that change how production ships.",
+      "Vulnerability assessment and penetration testing for apps, APIs, and networks that matter in production.",
     scope: [
       "Web and API security testing",
       "Mobile application assessment",
@@ -191,64 +189,43 @@ export const frameworks = [
 
 export const about = {
   mission:
-    "Mitiga exists to make high-signal security reachable for teams that move fast—using AI to accelerate analysis while keeping human judgment on decisions that matter.",
+    "We help teams that move fast stay secure. AI speeds up the analysis. People still make the calls that matter.",
   principles: [
     {
-      title: "Evidence over theater",
-      body: "Findings include context and reproduction—not slideware.",
+      title: "Evidence first",
+      body: "Findings come with context and steps to reproduce, not just slides.",
     },
     {
       title: "AI as leverage",
-      body: "Models accelerate triage and narrative; operators own conclusions.",
+      body: "Models help with triage and write-ups. Operators own the conclusions.",
     },
     {
-      title: "Honest scope",
-      body: "We say what we can verify. We do not invent logos or metrics.",
-    },
-  ],
-  team: [
-    // TODO: replace with real names, roles, and bios
-    {
-      initials: "A",
-      name: "Founder A",
-      role: "CEO",
-      bio: "Placeholder — add real biography.",
-    },
-    {
-      initials: "B",
-      name: "Founder B",
-      role: "CTO",
-      bio: "Placeholder — add real biography.",
-    },
-    {
-      initials: "C",
-      name: "Founder C",
-      role: "Head of Security",
-      bio: "Placeholder — add real biography.",
+      title: "Clear scope",
+      body: "We say what we checked, what we found, and what still needs work.",
     },
   ],
 } as const;
 
 export const faqs = [
   {
-    q: "What does Mitiga actually deliver?",
-    a: "Cloud security assessments, red team engagements, and VAPT—supported by AI-assisted detection, triage, and reporting workflows. Engagements produce prioritized findings with reproduction steps and remediation guidance.",
+    q: "What does Mitiga deliver?",
+    a: "Cloud security assessments, red team engagements, and VAPT, backed by AI-assisted detection, triage, and reporting. You get prioritized findings with reproduction steps and remediation guidance.",
   },
   {
     q: "Are you certified against ISO 27001 or similar?",
-    a: "Our methodologies are mapped to frameworks such as OWASP, MITRE ATT&CK, NIST CSF, CIS Benchmarks, and ISO 27001 control families. That is alignment—not a claim that Mitiga holds those certifications unless stated separately.",
+    a: "Our work maps to frameworks like OWASP, MITRE ATT&CK, NIST CSF, CIS Benchmarks, and ISO 27001 control families. That means alignment with those standards, not a claim that Mitiga holds those certifications.",
   },
   {
     q: "How do you use AI?",
-    a: "AI helps correlate signals, prioritize vulnerabilities, analyze attack paths, and draft clearer reports. Critical decisions and client recommendations remain human-reviewed.",
+    a: "AI helps correlate signals, prioritize vulnerabilities, analyze attack paths, and draft clearer reports. Recommendations are always reviewed by people before they reach you.",
   },
   {
     q: "Who is a good fit?",
-    a: "Cloud-native product and platform teams that want rigorous assessment and continuous posture improvement—not a one-off PDF for procurement.",
+    a: "Cloud product and platform teams that want a serious assessment and ongoing posture improvement, not a one-off PDF for procurement.",
   },
   {
     q: "How do we start?",
-    a: "Request a briefing via the contact form or email contact@mitiga.io. We scope objectives, environment, and timeline before any engagement begins.",
+    a: "Use the contact form or email info@mitiga.in. We scope objectives, environment, and timeline before any engagement begins.",
   },
 ] as const;
 

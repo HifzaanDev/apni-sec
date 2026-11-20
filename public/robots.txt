@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mitiga.io/sitemap.xml
+Sitemap: https://mitiga.in/sitemap.xml

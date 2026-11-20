@@ -47,13 +47,13 @@ export function SiteHeader() {
         <Logo />
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
               href={link.href}
               className="text-sm text-muted transition-colors hover:text-foreground"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
         <div className="hidden lg:block">
@@ -109,14 +109,14 @@ export function SiteHeader() {
           >
             <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="rounded-md px-3 py-3 text-base text-foreground hover:bg-white/[0.04]"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
               <Link
                 href="/contact"

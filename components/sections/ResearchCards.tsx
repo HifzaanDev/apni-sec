@@ -16,7 +16,7 @@ export function ResearchCards() {
           <SectionHeading
             eyebrow="Research"
             title="Insights written to be useful."
-            body="Short pieces on cloud risk, AI in red teaming, and API security—no agency filler."
+            body="Short pieces on cloud risk, AI in red teaming, and API security."
           />
           <Link
             href="/research"

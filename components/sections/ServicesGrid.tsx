@@ -23,7 +23,7 @@ export function ServicesGrid() {
         <SectionHeading
           eyebrow="Services"
           title="Three engagements. Clear scope. Actionable output."
-          body="Cloud Security, Red Team Assessment, and VAPT—each with methodology and deliverables you can evaluate before a kickoff."
+          body="Cloud Security, Red Team Assessment, and VAPT. Each comes with a clear methodology and deliverables you can review before kickoff."
         />
         <motion.div
           className="mt-12 grid gap-4 md:grid-cols-3"

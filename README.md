@@ -1,6 +1,6 @@
 # Mitiga
 
-AI-native security for modern infrastructure — static marketing site (Next.js App Router).
+AI native security for modern infrastructure. Static marketing site (Next.js App Router).
 
 ## Local development
 
@@ -19,24 +19,18 @@ npm run build
 
 Static export output lands in `out/`. Preview with any static server, e.g. `npx serve out`.
 
-**Zero environment variables required.**
+No environment variables required.
 
 ## Deploy on Vercel
 
 1. Push this repo to GitHub.
 2. Import the project in Vercel (root directory: `apni-sec` if the repo parent is the workspace).
-3. Clear any leftover env vars from the previous full-stack app (database, JWT, email provider keys, etc.).
-4. Build command: `npm run build` — Next.js static export (`output: "export"`).
-5. Deploy and crawl nav/footer/contact links on the preview URL.
+3. Clear any leftover env vars from the previous full-stack app.
+4. Build command: `npm run build`.
+5. Deploy and check nav, footer, and contact links on the preview URL.
 
-## Founder TODOs
+## Notes
 
-Editable in `content/site.ts` and legal pages:
-
-- Real team bios / photos
-- Real LinkedIn, X, GitHub URLs
-- Real Cal.com (or equivalent) scheduling link
-- Verified metrics or design-partner names (only if true)
-- Legal review of Privacy / Terms
-
-Forms use mailto today; swap transport in `lib/forms.ts` for Formspree/Resend later.
+- Edit site copy in `content/site.ts` and research articles in `content/research.ts`.
+- LinkedIn URL is still a standing link to update when the company page is live.
+- Contact and newsletter forms use mailto today; swap transport in `lib/forms.ts` when you add a form provider.

@@ -1,7 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
-import { IconGitHub, IconLinkedIn, IconX } from "@/components/icons";
+import { IconLinkedIn, IconX } from "@/components/icons";
 import { footerColumns, site } from "@/content/site";
 
 export function SiteFooter() {
@@ -12,15 +14,15 @@ export function SiteFooter() {
           <div>
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              {site.tagline}. Precise assessment, AI-assisted analysis, and honest scope.
+              {site.tagline}. Practical assessments, AI-assisted analysis, and clear deliverables.
             </p>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">{site.address}</p>
             <div className="mt-6 flex items-center gap-3">
               <a
                 href={site.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Mitiga on LinkedIn (placeholder)"
+                aria-label="Mitiga on LinkedIn"
                 className="rounded-md border border-border p-2 text-muted transition-colors hover:border-accent/40 hover:text-accent"
+                onClick={(e) => e.preventDefault()}
               >
                 <IconLinkedIn />
               </a>
@@ -28,19 +30,10 @@ export function SiteFooter() {
                 href={site.social.x}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Mitiga on X (placeholder)"
+                aria-label="Mitiga on X"
                 className="rounded-md border border-border p-2 text-muted transition-colors hover:border-accent/40 hover:text-accent"
               >
                 <IconX />
-              </a>
-              <a
-                href={site.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Mitiga on GitHub (placeholder)"
-                className="rounded-md border border-border p-2 text-muted transition-colors hover:border-accent/40 hover:text-accent"
-              >
-                <IconGitHub />
               </a>
             </div>
             <div className="mt-8 max-w-sm">
@@ -55,16 +48,24 @@ export function SiteFooter() {
               <div key={col.title}>
                 <p className="mb-3 text-sm font-medium text-foreground">{col.title}</p>
                 <ul className="space-y-2">
-                  {col.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-muted transition-colors hover:text-accent"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
+                  {col.links.map((link) => {
+                    const isHash = link.href.includes("#");
+                    const className =
+                      "text-sm text-muted transition-colors hover:text-accent";
+                    return (
+                      <li key={link.label}>
+                        {isHash ? (
+                          <a href={link.href} className={className}>
+                            {link.label}
+                          </a>
+                        ) : (
+                          <Link href={link.href} className={className}>
+                            {link.label}
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

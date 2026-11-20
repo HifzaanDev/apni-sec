@@ -95,8 +95,8 @@ export function PlatformBento() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Platform"
-          title="AI capabilities that shrink time-to-signal."
-          body="Five capabilities designed to work together: detect, triage, map paths, watch posture, and report with clarity."
+          title="Capabilities that help you find signal faster."
+          body="Five capabilities that work together: detect, triage, map paths, watch posture, and report clearly."
         />
         <motion.div
           className="mt-12 grid gap-4 md:grid-cols-6"

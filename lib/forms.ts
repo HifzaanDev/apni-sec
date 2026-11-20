@@ -32,20 +32,14 @@ export function validateNewsletter(data: NewsletterPayload) {
   return errors;
 }
 
-/**
- * Frontend-only submission handler.
- * Opens a structured mailto: as the default transport.
- *
- * TODO (swap): Replace the body of this function with a Formspree / Resend /
- * serverless POST. Keep the same validate* → success UI contract.
- */
+/** Opens a structured mailto. Easy to swap for Formspree/Resend later. */
 export function submitContactMailto(data: ContactPayload) {
-  const subject = encodeURIComponent(`Briefing request — ${data.name}`);
+  const subject = encodeURIComponent(`Briefing request - ${data.name}`);
   const body = encodeURIComponent(
     [
       `Name: ${data.name}`,
       `Email: ${data.email}`,
-      `Company: ${data.company?.trim() || "—"}`,
+      `Company: ${data.company?.trim() || "-"}`,
       "",
       data.message.trim(),
     ].join("\n"),
@@ -53,10 +47,7 @@ export function submitContactMailto(data: ContactPayload) {
   window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
 }
 
-/**
- * Frontend-only newsletter handler (mailto fallback).
- * TODO (swap): POST to Formspree / newsletter provider.
- */
+/** Newsletter signup via mailto. Easy to swap for a provider later. */
 export function submitNewsletterMailto(data: NewsletterPayload) {
   const subject = encodeURIComponent("Newsletter signup");
   const body = encodeURIComponent(`Please add ${data.email.trim()} to the Mitiga updates list.`);
